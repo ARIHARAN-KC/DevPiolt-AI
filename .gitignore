@@ -1,0 +1,44 @@
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend
+node_modules/
+.next/
+out/
+coverage/
+
+# Local workspaces, uploads, logs, and generated reports
+workspaces/
+uploads/
+logs/
+reports/generated/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
