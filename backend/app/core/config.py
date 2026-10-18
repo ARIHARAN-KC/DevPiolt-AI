@@ -1,7 +1,11 @@
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# Project root: D:\ZT\devpilot-ai
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 class Settings(BaseSettings):
@@ -20,7 +24,7 @@ class Settings(BaseSettings):
     sandbox_provider: str = "mock"
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=PROJECT_ROOT / ".env",
         env_file_encoding="utf-8",
         extra="ignore",
     )
